@@ -17,7 +17,7 @@ export const LoginForm = () => {
     if (state?.message) {
       if (state.success) {
         toast.success(state.message);
-        router.push('/');
+        router.push('/profile');
       } else {
         toast.error(state.message);
       }
@@ -25,7 +25,7 @@ export const LoginForm = () => {
   }, [state]);
 
   return (
-    <form action={action} className="flex flex-col gap-4">
+    <form action={action} className="flex flex-col gap-4 w-full">
       <div className="flex flex-col gap-1">
         <Label htmlFor="email">Email</Label>
         <Input type="email" name="email" placeholder="Email" required />

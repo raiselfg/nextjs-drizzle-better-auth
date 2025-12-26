@@ -7,6 +7,7 @@ export const oauthLogin = async (provider: string) => {
     const data = await auth.api.signInSocial({
       body: {
         provider,
+        callbackURL: '/profile',
       },
     });
     return data.url ?? null;

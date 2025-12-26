@@ -5,8 +5,10 @@ export default function SignupPage() {
   return (
     <div className="flex flex-col items-center justify-center h-screen">
       <h1 className="text-2xl font-bold">Signup</h1>
-      <SignupForm />
-      <OAuthButton provider="github" />
+      <div className="w-full max-w-sm flex flex-col gap-1">
+        <SignupForm />
+        <OAuthButton provider="github" />
+      </div>
     </div>
   );
 }

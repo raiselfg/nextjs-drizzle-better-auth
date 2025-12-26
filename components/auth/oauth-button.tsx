@@ -23,7 +23,7 @@ export const OAuthButton = ({ provider }: Props) => {
     }
   };
   return (
-    <Button onClick={handleLogin}>
+    <Button className="w-full" onClick={handleLogin}>
       <p>Login with {provider}</p>
     </Button>
   );
