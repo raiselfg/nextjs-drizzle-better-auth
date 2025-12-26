@@ -1,5 +1,6 @@
 import { LoginForm } from '@/components/auth/login-form';
 import { OAuthButton } from '@/components/auth/oauth-button';
+import Link from 'next/link';
 
 export default function LoginPage() {
   return (
@@ -9,6 +10,12 @@ export default function LoginPage() {
         <LoginForm />
         <OAuthButton provider="github" />
       </div>
+      <span className="flex gap-1 items-center text-sm text-muted-foreground">
+        <p>Don&apos;t have an account?</p>
+        <p className="underline underline-offset-4">
+          <Link href="/auth/signup">Sign up</Link>
+        </p>
+      </span>
     </div>
   );
 }
